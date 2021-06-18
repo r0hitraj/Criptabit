@@ -57,7 +57,7 @@ public class Cryptomarket extends AppCompatActivity {
 
 
         new Cryptomarket.AsyncTaskImpl().execute("pricemultifull?fsyms=" + ALLSYMBOLS +
-                "&api_key=fa9844413727a02fe2322204004108e1bb499680eaebaa7cedd170f7f93aa463&tsyms=USD", null);
+                "&api_key=&tsyms=USD", null);
 
 
         mButton.setOnClickListener(
@@ -68,7 +68,7 @@ public class Cryptomarket extends AppCompatActivity {
                         mEdit.getEditText().setText("");
                         if (!query.equals(""))
                             new Cryptomarket.GetSearchAsyncTask().execute("pricemultifull?fsyms=" + query +
-                                    "&api_key=fa9844413727a02fe2322204004108e1bb499680eaebaa7cedd170f7f93aa463&tsyms=USD", null);
+                                    "&api_key=&tsyms=USD", null);
 
                     }
                 });
