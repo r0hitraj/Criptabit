@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "310057472637",
+    "project_id": "criptabit-253dd",
+    "storage_bucket": "criptabit-253dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310057472637:android:7bff2108d706234ffd5714",
+        "android_client_info": {
+          "package_name": "com.example.criptabit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310057472637-6lfumaqv1eb5ve8p0e70vbs61pvrqo7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM5Z9eSio1-SMtf3VwZwti1GXE3YvDiaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310057472637-6lfumaqv1eb5ve8p0e70vbs61pvrqo7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

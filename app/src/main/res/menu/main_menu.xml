@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+
+
+        <item
+            android:id="@+id/fav"
+            android:icon="@drawable/fav"
+            android:title="Favourite" />
+
+        <item
+            android:id="@+id/coinmarket"
+            android:icon="@drawable/coin"
+            android:title="Coin Market" />
+
+        <item
+            android:id="@+id/stockmarket"
+            android:icon="@drawable/stock"
+            android:title="Stock Market" />
+
+    </group>
+
+
+        <item android:title="Profile">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/username"
+                android:title="User Profile" />
+            <item
+                android:id="@+id/signup"
+                android:icon="@drawable/signup"
+                android:title="SignUp" />
+            <item
+                android:id="@+id/login"
+                android:icon="@drawable/login"
+                android:title="Login" />
+
+            </group>
+        </menu>
+
+        </item>
+
+
+    <item android:title="Communication">
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/logout"
+                    android:title="Logout"
+                    android:icon="@drawable/logout_icon" />
+
+                <item
+                    android:id="@+id/share"
+                    android:title="Share"
+                    android:icon="@drawable/share" />
+
+                <item
+                    android:id="@+id/about"
+                    android:title="About US"
+                    android:icon="@drawable/about" />
+
+                <item
+                    android:id="@+id/help"
+                    android:title="Help Center"
+                    android:icon="@drawable/help" />
+
+            </group>
+
+        </menu>
+    </item>
+</menu>

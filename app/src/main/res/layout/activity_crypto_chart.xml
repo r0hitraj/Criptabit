@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CryptoChart">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="38dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="62dp">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#004AAD"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:titleTextColor="@color/white"></androidx.appcompat.widget.Toolbar>
+
+            <!--    search layout-->
+            <LinearLayout
+                android:id="@+id/daychart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/searchday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:hint="Enter Day in 1 to 2000 "
+                    android:singleLine="true"
+                    android:textColorHint="@color/black"
+                    android:textSize="25dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FBFCFC"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:inputType="number"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/generateday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:backgroundTint="#004AAD"
+                    android:fontFamily="@font/bungee"
+                    android:hint="Generate"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <!--    search layout-->
+            <LinearLayout
+                android:id="@+id/hrchart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/daychart">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/searchhr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:hint="Enter Hour 1 to 2000  "
+                    android:singleLine="true"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FBFCFC"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:inputType="number"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/generatehr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/bungee"
+                    android:hint="Generate"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linechart"
+                android:layout_width="344dp"
+                android:layout_height="650dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hrchart"></com.github.mikephil.charting.charts.LineChart>
+
+            <TableLayout
+                android:id="@+id/tableLayoutGraphFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="10dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linechart"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TableRow
+                    android:id="@+id/nameTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tableNameTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Name" />
+
+                    <TextView
+                        android:id="@+id/symbol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/priceUSDTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightGray">
+
+                    <TextView
+                        android:id="@+id/tablePriceUSDTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Price (USD)" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:id="@+id/volUSDTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tableVolUSDTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="24h Volume" />
+
+                    <TextView
+                        android:id="@+id/vol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/mktCapUSDTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightGray">
+
+                    <TextView
+                        android:id="@+id/tableMktCapTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Market Cap" />
+
+                    <TextView
+                        android:id="@+id/marketcap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/availableSupplyTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tableAvailableSupplyTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Available Supply" />
+
+                    <TextView
+                        android:id="@+id/avalablesupply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/totalSupplyTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightGray">
+
+                    <TextView
+                        android:id="@+id/tableTotalSupplyTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Total Supply" />
+
+                    <TextView
+                        android:id="@+id/totalsupply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/maxSupplyTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tableMaxSupplyTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Data source" />
+
+                    <TextView
+                        android:id="@+id/datasrc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/changeTitlesTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightGray">
+
+                    <TextView
+                        android:id="@+id/table1hrChangeTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="% Change 1hr"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/table24hrChangeTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="% Change 24hr"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tableWeekChangeTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="% Change 1d"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/m1hr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/m24hr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/m1day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightGray">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Highest In Day"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Lowest In Day"
+                        android:textAlignment="center" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/high1day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/low1day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightGray">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Highest In 1hr"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Lowest In 1hr"
+                        android:textAlignment="center" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/high1hr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/low1hr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightGray">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Highest In 24hr"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingStart="8dp"
+                        android:text="Lowest In 24hr"
+                        android:textAlignment="center" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/high24hr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/low24hr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_mono_bold"
+                        android:paddingEnd="8dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

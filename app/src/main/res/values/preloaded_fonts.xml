@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/antic</item>
+        <item>@font/antic_slab</item>
+        <item>@font/bangers</item>
+        <item>@font/bungee</item>
+        <item>@font/bungee_shade</item>
+        <item>@font/modak</item>
+        <item>@font/ubuntu_mono_bold</item>
+    </array>
+</resources>

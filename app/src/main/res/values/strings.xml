@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Criptabit</string>
+    <string name="start">One Stop For Every Financial Info</string>
+
+    <string name="navigation_drawer_open">Open navigation</string>
+    <string name="navigation_drawer_close">Close navigation</string>
+    <string name="aboutapp">The Purpose of this app is to integrate real time cryptocurrency
+transaction and valuation detail along with beautiful and aesthetic
+charts. Then we will add centralized markets and stocks financial data</string>
+</resources>
