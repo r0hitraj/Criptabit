@@ -57,7 +57,7 @@ public class CommonUtilsCoins {
         Request request = new Request.Builder()
                 .url(reqUrl)
                 .get()
-                .addHeader("x-rapidapi-key", "731550f435mshc28d5751ec5e812p18b913jsnc0b528c970ec")
+                .addHeader("x-rapidapi-key", " ") //add key
                 .addHeader("x-rapidapi-host", "apidojo-yahoo-finance-v1.p.rapidapi.com")
                 .build();
         Response response = client.newCall(request).execute();
