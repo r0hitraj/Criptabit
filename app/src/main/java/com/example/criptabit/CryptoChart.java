@@ -100,7 +100,7 @@ public class CryptoChart extends AppCompatActivity implements OnChartGestureList
                         limit=dayText;
                         if (!limitday.equals(""))
                             new CryptoChart.GetChart().execute("v2/histoday?fsym=" + symbol +
-                                    "&tsym=USD&api_key=fa9844413727a02fe2322204004108e1bb499680eaebaa7cedd170f7f93aa463&limit="+limitday, null);
+                                    "&tsym=USD&api_key=&limit="+limitday, null);
 
                     }
                 });
