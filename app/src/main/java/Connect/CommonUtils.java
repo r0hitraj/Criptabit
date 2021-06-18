@@ -57,7 +57,7 @@ public class CommonUtils {
         Request request = new Request.Builder()
                 .url(reqUrl)
                 .get()
-                .addHeader("x-rapidapi-key", "e3d46827bbmsh1daf1b167ce0c46p118c20jsn2a0586607618")
+                .addHeader("x-rapidapi-key", " ") //add key
                 .addHeader("x-rapidapi-host", "apidojo-yahoo-finance-v1.p.rapidapi.com")
                 .build();
         Response response = client.newCall(request).execute();
