@@ -7,20 +7,23 @@
 
 Criptabit is an Android app that tracks and displays prices, charts, markets, and fundamentals of over 1500 crypto currencies! an 10K+ Stoks symbols The app is completely open source with NO ADS EVER! It was a labor of love. I have spent months working on it every night after I get home from work and on weekends. 
 
-<img src="Images/splash.jpg" height='auto' width='270'/>
+<div align="centre">
+<img src="Images/splash.jpg" height='auto' width='270' alt="Splash Screen"/>
 <img src="Images/login.jpg" height='auto' width='270'/>
 <img src="Images/signup.jpg" height='auto' width='270'/>
 <img src="Images/forgot.jpg" height='auto' width='270'/>
+<img src="Images/profile.png" height='auto' width='270'/>
 <img src="Images/dashboard.jpg" height='auto' width='270'/>
 <img src="Images/stockmarket.jpg" height='auto' width='270'/>
 <img src="Images/stockchart.jpg" height='auto' width='270'/>
 <img src="Images/coinmarket.jpg" height='auto' width='270'/>
 <img src="Images/coinchart.jpg" height='auto' width='270'/>
 <img src="Images/coinchart2.jpg" height='auto' width='270'/>
-<img src="Images/dashboard.jpg" height='auto' width='270'/>
+<img src="Images/sidedrawer.jpg" height='auto' width='270'/>
 <img src="Images/share.jpg" height='auto' width='270'/>
 <img src="Images/about.jpg" height='auto' width='270'/>
 
+</div>
 
 ## Features
 
@@ -58,4 +61,4 @@ These two permissions are required so that we can talk to the APIs on the intern
 * <a href="https://min-api.cryptocompare.com/">CryptoCompare</a>: Huge thanks to CryptoCompare! Without their APIs this app would not be possible. They are the backend for chart data, coin images, market caps, volume, prices, and percent changes
 * <a href="https://rapidapi.com/apidojo/api/yahoo-finance1/">Yahoo Finance-api</a>: This API Is Used for Accesing data of stock Market (symbol and all)
 * <a href="https://shields.io/">shields.io</a>: Provides the beautiful build badges at the top of this README
-* <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
+* <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>For Wonderfull icons
