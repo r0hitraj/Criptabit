@@ -38,15 +38,7 @@ Criptabit is an Android app that tracks and displays prices, charts, markets, an
 * Displays markets for each currency  and Stock symbol sorted by volume
 
 ## Libraries Used
-
-* <a href="https://github.com/fcopardo/EasyRest">EasyRest</a>: This library is used extensively for all network calls within the app. It takes care of request caching, multi-threading, and marshalling JSON into objects with Jackson
-* <a href="https://github.com/afollestad/material-dialogs">material-dialogs</a>: Library used to show the sorting dialog 
-* <a href="https://github.com/nex3z/ToggleButtonGroup">ToggleButtonGroup</a>: Library used for the buttons which allow users to toggle the date range on the chart
-* <a href="https://github.com/IvBaranov/MaterialFavoriteButton">MaterialFavoriteButton</a>: Library used for the favorite button on the home screen
 * <a href="https://github.com/PhilJay/MPAndroidChart">MPAndroidChart</a>: Used to show price over time chart
-* <a href="http://square.github.io/picasso/">Picasso</a>: Library used for hassle-free image loading and display
-* <a href="https://github.com/google/gson">GSON</a>: Library used to serialize text from the database into real Java objects and vice-versa
-
 * <a href="https://firebase.google.com/">Firebase</a>: Firebase for providing real time authentication
 
 ## Permissions
