@@ -5,7 +5,7 @@
 [![GitHub (pre-)release](https://img.shields.io/github/release/r0hitraj/criptabit/all.svg)](https://github.com/r0hitraj/criptabit/releases/tag/5.3.3)
 
 
-Criptabit is an Android app that tracks and displays prices, charts, markets, and fundamentals of over 1500 crypto currencies! an 10K+ Stoks symbols The app is completely open source with NO ADS EVER! It was a labor of love. I have spent months working on it every night after I get home from work and on weekends. 
+Criptabit is an Android app that tracks and displays prices, charts, markets, and fundamentals of over 1500 crypto currencies! an 10K+ Stoks symbols The app is completely open source with NO ADS EVER! It was a labor of love. I have spent months working on it every night after I get home from college and on weekends. 
 
 <div align="centre">
 <img src="Images/splash.jpg" height='auto' width='270' alt="Splash Screen"/>
